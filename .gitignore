@@ -1,0 +1,41 @@
+/* models/* */
+/* !models/25_lift_net/best_val.model */
+/* !models/25_dncnn_s_17/best_val.model */
+/*  */
+/* !logs/ */
+/* logs/* */
+/* !logs/visdom/25_lift_net.json */
+/* !logs/visdom/25_dncnn_s_17.json */
+
+### MAC ###
+.DS_Store
+
+# Distribution / packaging
+build/
+*.egg-info/
+*.eggs
+dist
+
+### python ###
+.venv
+*.pyc
+__pycache__
+.ipynb_checkpoints
+.python-version
+
+### editor ###
+*.swp
+*.vscode
+
+### latex ###
+*.aux
+*.blg
+*.brf
+*.fdb_latexmk
+*.gz
+*.log
+*.fls
+*.pdf
+*.bbl
+*.zip
+*.synctex.gz

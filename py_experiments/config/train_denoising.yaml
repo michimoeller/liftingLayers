@@ -1,0 +1,37 @@
+model_name: "DnCNN-S-17"
+save_model_path: 'models'
+vis_env_name: 'main'
+kaiming_init: True
+vis: True
+test_model_path: null
+
+nn_train:
+  data_cfg:
+    dataset: "BSD500"                # ["BSD500"]
+    noise:
+      mean: 0.0
+      stddev: 25.0
+    batch_sizes:
+      train: 128
+      val: 1
+      test: 1
+    loader_kwargs:
+      num_workers: 8                # 0 if cuda is available. set by available CPUs if null
+      drop_last: False
+      shuffle: True
+
+  solver_cfg:
+    epochs: 50                      # number of training epochs. infinite if null
+    optim: 'Adam'                   # ["Adam", "SGD"]
+    optim_kwargs:
+      Adam:
+        lr: 0.001
+        # betas: [0.9, 0.999]         # momentums beta and beta^2
+        # weight_decay: 0.0001        # l2 weight penalization
+        # eps: 0.00000001             # improves numerical stability
+    early_stopping:
+      patience: null                # if null early stopping is deactivated
+      min_delta: 0.0
+    ada_lr:
+      epochs: [30]                    # array of epochs to multiply the learning rate with factor (default: [100])
+      factor: 0.1
