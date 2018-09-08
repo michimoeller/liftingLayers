@@ -5,8 +5,8 @@ This repository provides the implementation of **Lifting Layers: Analysis and Ap
 Instructions
 -------------------
 
-1. Execute `git clone git@github.com:michimoeller/liftingLayers.git` to clone the repository
-2. Follow installation and usage instructions in the respective MATLAB and Python subdirectories
+1. Execute `git clone git@github.com:michimoeller/liftingLayers.git` to clone the repository.
+2. Follow installation and usage instructions in the respective MATLAB and Python subdirectories.
 
 Publication
 -------------------
