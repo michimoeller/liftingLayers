@@ -1,5 +1,6 @@
 %% Load data
-load('./data/cifar10Data.mat');
+addpath(genpath('./helpers'));
+[trainingImages,trainingLabels,validationImages,validationLabels] = loadCifar10Data();
 [ny,nx,nz] = size(testImages(:,:,:,1));
 %% Train the network. 
 options = trainingOptions('sgdm','MaxEpochs',50,...
@@ -21,7 +22,7 @@ layers = ourArchitecture(ny,nx,nz,outDim);
 [ourNetOrig, ourInfoOrig] = trainNetwork(trainingImages,trainingLabels,layers,options);
 
 %% case L=3
-L=3
+L=3;
 fac = 0.82;
 L3channels = round(fac*channels);
 totalParamsL3 = totalNumberOfParams(L,cat(2,L3channels,outDim));
