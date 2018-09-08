@@ -1,12 +1,3 @@
-/* models/* */
-/* !models/25_lift_net/best_val.model */
-/* !models/25_dncnn_s_17/best_val.model */
-/*  */
-/* !logs/ */
-/* logs/* */
-/* !logs/visdom/25_lift_net.json */
-/* !logs/visdom/25_dncnn_s_17.json */
-
 ### MAC ###
 .DS_Store
 

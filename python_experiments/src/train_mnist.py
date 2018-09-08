@@ -42,7 +42,8 @@ x = tf.placeholder(tf.float32, [None, 784], name='InputData')
 y = tf.placeholder(tf.float32, [None, 10], name='LabelData')
 
 
-def linear(): W1 = create_weight_variable('Weights', [784, 10]):
+def linear():
+    W1 = create_weight_variable('Weights', [784, 10])
     b1 = create_bias_variable('Bias', [10])
     return tf.nn.softmax(tf.matmul(x, W1) + b1)
 
@@ -176,8 +177,8 @@ with tf.Session(config=sess_config) as sess:
 
     # Test model
     # Calculate accuracy
-    print('Accuracy: ', acc.eval({x: mnist.test.images, y: mnist.test.labels}))
-    print(f"Loss: {avg_cost}")
+    # print('Accuracy: ', acc.eval({x: mnist.test.images, y: mnist.test.labels}))
+    # print(f"Loss: {avg_cost}")
 
     print('Run the command line:\n' \
           '--> tensorboard --logdir=/tmp/tensorflow_logs ' \

@@ -18,11 +18,11 @@ class H5FDataset(Dataset):
         super(H5FDataset, self).__init__()
         self._mode = mode
         if self._mode == 'train':
-            h5f = h5py.File('data/train.h5', 'r')
+            h5f = h5py.File('data/denoising/train.h5', 'r')
         elif self._mode == 'val':
-            h5f = h5py.File('data/val.h5', 'r')
+            h5f = h5py.File('data/denoising/val.h5', 'r')
         elif self._mode == 'test':
-            h5f = h5py.File('data/test.h5', 'r')
+            h5f = h5py.File('data/denoising/test.h5', 'r')
         self.keys = list(h5f.keys())
         random.shuffle(self.keys)
         h5f.close()
@@ -32,11 +32,11 @@ class H5FDataset(Dataset):
 
     def __getitem__(self, index):
         if self._mode == 'train':
-            h5f = h5py.File('data/train.h5', 'r')
+            h5f = h5py.File('data/denoising/train.h5', 'r')
         elif self._mode == 'val':
-            h5f = h5py.File('data/val.h5', 'r')
+            h5f = h5py.File('data/denoising/val.h5', 'r')
         elif self._mode == 'test':
-            h5f = h5py.File('data/test.h5', 'r')
+            h5f = h5py.File('data/denoising/test.h5', 'r')
         key = self.keys[index]
         data = np.array(h5f[key])
         h5f.close()
