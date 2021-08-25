@@ -47,7 +47,7 @@ simplejson==3.13.2
 six==1.11.0
 tensorboard==1.10.0
 tensorboardX==1.1
-tensorflow-gpu==1.15.2
+tensorflow-gpu==2.5.1
 tensorflow-tensorboard==0.4.0
 termcolor==1.1.0
 torchfile==0.1.0
