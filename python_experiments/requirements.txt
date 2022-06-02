@@ -16,7 +16,7 @@ greenlet==0.4.13
 grpcio==1.14.2
 gym==0.9.7
 h5py==2.8.0
-html5lib==0.9999999
+html5lib==0.99999999
 idna==2.6
 itsdangerous==0.24
 Jinja2==2.10
