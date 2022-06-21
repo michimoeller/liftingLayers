@@ -26,7 +26,7 @@ MarkupSafe==1.0
 matplotlib==2.1.2
 munch==2.2.0
 networkx==2.1
-numpy==1.14.2
+numpy==1.22.0
 opencv-python==3.4.0.12
 Pillow==6.2.0
 protobuf==3.6.1
